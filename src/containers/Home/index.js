@@ -1,9 +1,11 @@
 import React, { useState, useRef, useEffect } from "react";
 import axios from "axios";
-import Avatar from './assents/avatar.svg';
-import Arrow from './assents/arrow.svg';
-import Trash from './assents/trash.png';
+import Avatar from '../../assents/avatar.svg';
+import Arrow from '../../assents/arrow.svg';
+import Trash from '../../assents/trash.png';
+
 import {
+    
     Container,
     H1,
     Image,
@@ -38,9 +40,9 @@ function App() {
             const { data: newUsers } = await axios.get('http://localhost:3001/users');
 
             setUsers(newUsers);
-
-            fetchUsers()
         }
+            fetchUsers()
+        
     }, [users])
 
     async function deleteUser(userId) {

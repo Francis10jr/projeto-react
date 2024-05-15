@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import Background from './assents/background.svg'
+import Background from '../../assents/background.svg'
 
 export const Container = styled.div`
     background: url("${Background}");
