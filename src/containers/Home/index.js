@@ -1,4 +1,4 @@
-import React, { useState, useRef, } from "react";
+import React, { useState, useRef } from "react";
 import axios from "axios";
 import Avatar from '../../assents/avatar.svg';
 import Arrow from '../../assents/arrow.svg';

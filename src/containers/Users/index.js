@@ -1,6 +1,6 @@
-import React, { useState, useRef, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import axios from "axios";
-import Avatar from '../../assents/avatar.svg';
+import People from '../../assents/people.svg';
 import Arrow from '../../assents/arrow.svg';
 import Trash from '../../assents/trash.png';
 
@@ -10,31 +10,17 @@ import {
     H1,
     Image,
     ContainerItens,
-    InputLabel,
-    Input,
     Button,
     User
 } from "./styles";
 //import { toHaveAccessibleErrorMessage } from '@testing-library/jest-dom/matchers';
 
 
-function App() {
+function Users() {
     const [users, setUsers] = useState([]);
-    const inputName = useRef();
-    const inputAge = useRef();
+   
 
-    async function addNewUser() {
-
-        const { data: newUser } = await axios.post("http://localhost:3001/users", {
-            name: inputName.current.value,
-            age: inputAge.current.value,
-        });
-
-        setUsers([...users, newUser]);
-
-    }
-
-    useEffect(() => {
+   useEffect(() => {
 
         async function fetchUsers() {
             const { data: newUsers } = await axios.get('http://localhost:3001/users');
@@ -57,19 +43,9 @@ function App() {
         <Container>
             <Image alt='logo-imagem' src={Avatar} />
             <ContainerItens>
-                <H1>Olá</H1>
+                <H1>Usuários</H1>
 
-                <InputLabel>Nome</InputLabel>
-                <Input ref={inputName} placeholder='Nome' />
-
-                <InputLabel>Idade</InputLabel>
-                <Input ref={inputAge} placeholder='Idade' />
-
-
-                <Button onClick={addNewUser}>Cadastrar<img alt='seta' src={Arrow} />
-                </Button>
-
-                <ul>
+             <ul>
                     {users.map((user) => (
                         <User key={user.id}>
 
@@ -81,9 +57,13 @@ function App() {
                     ))}
                 </ul>
 
+                <Button>
+                <img alt='seta' src={People} /> Voltar
+                </Button>
+
             </ContainerItens>
         </Container>
     );
 
 }
-export default App;
+export default Users;
