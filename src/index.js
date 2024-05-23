@@ -1,8 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import Home from "./containers/Home";
-import Users from "./containers/Users"
-import GlobalStyle from './globalStyle';
+import Users from "./containers/Users";
+import GlobalStyle from './globalstyle';
 
 ReactDOM.render(
     <>

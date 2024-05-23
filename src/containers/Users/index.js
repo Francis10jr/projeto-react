@@ -41,7 +41,7 @@ function Users() {
 
     return (
         <Container>
-            <Image alt='logo-imagem' src={Avatar} />
+            <Image alt='logo-imagem' src={People} />
             <ContainerItens>
                 <H1>Usuários</H1>
 
