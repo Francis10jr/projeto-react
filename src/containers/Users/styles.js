@@ -1,5 +1,6 @@
-import styled from 'styled-components'
-import Background from '../../assents/background1.svg'
+import styled from 'styled-components';
+import { Link } from 'react-router-dom';
+import Background from '../../assents/background1.svg';
 
 export const Container = styled.div`
     background: url("${Background}");
@@ -43,10 +44,10 @@ color: #ffffffff;
 margin-bottom: 80px;
 `;
 
-export const Button = styled.button`
+export const Button = styled(Link)`
 width: 342 px;
 height: 74px;
-margin-top: 120px;
+margin-top: 130px;
 
 background: transparent;
 border-radius: 14px;

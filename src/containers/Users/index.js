@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
+
 import People from '../../assents/people.svg';
 import Arrow from '../../assents/arrow.svg';
 import Trash from '../../assents/trash.png';
@@ -11,7 +12,7 @@ import {
     Image,
     ContainerItens,
     Button,
-    User
+    User,
 } from "./styles";
 //import { toHaveAccessibleErrorMessage } from '@testing-library/jest-dom/matchers';
 
@@ -57,8 +58,8 @@ function Users() {
                     ))}
                 </ul>
 
-                <Button>
-                <img alt='seta' src={People} /> Voltar
+                <Button to="/cadastro">
+                <img alt='seta' src={Arrow} /> Voltar
                 </Button>
 
             </ContainerItens>
